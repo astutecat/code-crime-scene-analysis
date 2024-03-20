@@ -3,4 +3,5 @@
 	url = git@github.com:adamtornhill/code-maat.git
 [submodule "maat-scripts"]
 	path = maat-scripts
-	url = git@github.com:adamtornhill/maat-scripts.git
+  url = git@github.com:adamtornhill/maat-scripts.git
+  branch = python3
