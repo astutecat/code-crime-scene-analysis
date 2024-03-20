@@ -1,3 +1,6 @@
 [submodule "code-maat"]
 	path = code-maat
 	url = git@github.com:adamtornhill/code-maat.git
+[submodule "maat-scripts"]
+	path = maat-scripts
+	url = git@github.com:adamtornhill/maat-scripts.git
