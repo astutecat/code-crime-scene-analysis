@@ -1,3 +1,9 @@
+[private]
+default:
+  @just --justfile "{{justfile()}}" --list
+
+install-hooks:
+  pre-commit install
 
 docker-build:
    docker build --quiet -t code-maat-app ./code-maat
@@ -16,4 +22,4 @@ generate-git-log dir after:
 
 cloc dir output:
   cd {{dir}} && \
-  cloc ./ --unix --by-file --csv --quiet --report-file={{invocation_directory()}}/{{output}}
+  cloc ./ --unix --by-file --csv --quiet --report-file={{invocation_directory()}}/{{output}}%
