@@ -27,4 +27,4 @@ generate-git-log dir after:
 
 cloc dir output:
   cd {{dir}} && \
-  cloc ./ --unix --by-file --csv --quiet --report-file={{invocation_directory()}}/{{output}}%
+  cloc ./ --unix --by-file --csv --quiet --report-file={{invocation_directory()}}/{{output}}
