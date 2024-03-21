@@ -9,8 +9,13 @@ docker-build:
    docker build --quiet -t code-maat-app ./code-maat
 
 alias m := maat
+[linux]
 maat *args: docker-build
   docker run --rm -v $PWD:/cm code-maat-app {{args}}
+
+[macos]
+maat *args:
+   java -jar bin/code-maat.jar {{args}}
 
 alias mg := maat-git
 maat-git *args:
