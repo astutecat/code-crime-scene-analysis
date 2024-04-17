@@ -9,13 +9,12 @@ docker-build:
    docker build --quiet -t code-maat-app ./code-maat
 
 alias m := maat
-
 maat *args:
    java -jar bin/code-maat.jar {{args}}
 
 alias mg := maat-git
-maat-git *args:
-  just maat -l /cm/logfile.log -c git2 {{args}}
+maat-git logfile *args:
+  just maat -l {{logfile}} -c git2 {{args}}
 
 generate-git-log dir after="1970-01-01":
   cd {{dir}} && \
