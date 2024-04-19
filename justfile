@@ -23,3 +23,62 @@ generate-git-log dir after="1970-01-01":
 cloc dir output:
   cd {{dir}} && \
   cloc ./ --unix --by-file --csv --quiet --report-file={{invocation_directory()}}/{{output}}
+
+# Code Maat Analysis
+
+analysis type logfile *args:
+  just mg {{logfile}} -a {{type}} {{args}}
+
+abs-churn logfile *args:
+  just mg {{logfile}} -a abs-churn {{args}}
+
+age logfile *args:
+  just mg {{logfile}} -a age {{args}}
+
+author-churt logfile *args:
+  just mg {{logfile}} -a author-churt {{args}}
+
+authors logfile *args:
+  just mg {{logfile}} -a authors {{args}}
+
+communication logfile *args:
+  just mg {{logfile}} -a communication {{args}}
+
+coupling logfile *args:
+  just mg {{logfile}} -a coupling {{args}}
+
+entity-churn logfile *args:
+  just mg {{logfile}} -a entity-churn {{args}}
+
+entity-effort logfile *args:
+  just mg {{logfile}} -a entity-effort {{args}}
+
+entity-ownership logfile *args:
+  just mg {{logfile}} -a entity-ownership {{args}}
+
+fragmentation logfile *args:
+  just mg {{logfile}} -a fragmentation {{args}}
+
+identity logfile *args:
+  just mg {{logfile}} -a identity {{args}}
+
+main-dev logfile *args:
+  just mg {{logfile}} -a main-dev {{args}}
+
+main-dev-by-revs logfile *args:
+  just mg {{logfile}} -a main-dev-by-revs {{args}}
+
+messages logfile *args:
+  just mg {{logfile}} -a messages {{args}}
+
+refactoring-main-dev logfile *args:
+  just mg {{logfile}} -a refactoring-main-dev {{args}}
+
+revisions logfile *args:
+  just mg {{logfile}} -a revisions {{args}}
+
+soc logfile *args:
+  just mg {{logfile}} -a soc {{args}}
+
+summary logfile *args:
+  just mg {{logfile}} -a summary {{args}}
