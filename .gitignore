@@ -1,3 +1,4 @@
 tags
-logfile.log
+out/*
+*.log
 *.csv
