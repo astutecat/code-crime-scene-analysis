@@ -1,5 +1,0 @@
-[tools]
-pre-commit = "latest"
-java = "adoptopenjdk-19"
-just = "latest"
-direnv = "latest"
